@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     {
         public string Deneme()
         {
-            return "deneme";
+            return "deneme 2";
         }
     }
 }
