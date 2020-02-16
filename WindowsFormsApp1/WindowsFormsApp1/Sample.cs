@@ -8,6 +8,9 @@ namespace WindowsFormsApp1
 {
     class Sample
     {
-        //yeni class oluşturuldu.
+        public string Deneme()
+        {
+            return "deneme";
+        }
     }
 }
