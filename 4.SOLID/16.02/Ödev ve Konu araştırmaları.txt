@@ -1,0 +1,21 @@
+//Polymorphism -- Ayşe -- 29.02
+//Inheritance -- Utku -- 01.03
+//Encapsulation -- Sevcan -- 07.03
+//Interface -- Ayşegül --08.03
+//Abstraction -- Yavuz Selim --14 .03
+//Döngüler -- Ahmet -- 23.02
+//Metotlar -- Ergün -- 22.02
+//Entity Framework
+	--Db First --  Emre -- 15.03
+	--CodeFirst -- Elif -- 21.03
+//Mesra -- Karar yapısı ve hata yönetimi
+//Şeyma -- OOP kullanarak küçük bir proje
+//Mehdi -- Ntier
+
+--------------------------------------------------------------------------------------------
+//Proje geliştirmeye katılamayacaklar.
+----------------------------------------------------------
+//Emre hariç
+//Ahmet hariç
+//Mustafa Hariç
+////////////////////////////////////////////

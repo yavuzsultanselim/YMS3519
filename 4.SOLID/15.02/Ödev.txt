@@ -1,0 +1,14 @@
+Ergün yarına kadar sinema otomasyonunu code first geliştirecek.
+Emre code first olarak sinema SRP dahil edecek.
+sevcan hamburger otomasyonu ntier olarak yarına tamamlayacak.
+yavuz selim yarına kadar hamburger otomasyonu Ntier olarak yapacak.
+
+elif sinema otomasyonuna SRP dahil ediyor.
+mesra hamburger otomasyonu ntier ve codefirst olarak Solid'e uygun yapacak.
+Şeyma hamburger otomasyonunu araştır notlarını al hangi classın neden tanımlandığını metotların ne gibi işlemler yaptığını analiz et.
+
+Ayşe hamburger otomasyonu ntier ve code first olarak yarına tamamlayacağını söyledi.
+utku hamburger otomasyonu ntier ve codefirst olarak Solid'e uygun yapacak.
+mehdi hamburger otomasyonu ntier ve codefirst olarak Solid'e uygun yapacak.
+
+
