@@ -18,7 +18,13 @@ namespace CA_CreationalBuilder
             kullan.KartKullan(gercekKart);
             Console.WriteLine(gercekKart.Kart.ToString());
 
-            
+
+            KrediKarti krediKarti = new KrediKarti();
+            krediKarti.BankaAdi = "Türkiye İş Bankası";
+            krediKarti.KartTipi = "Visa";
+
+            KrediKarti krediKarti1 = new KrediKarti();
+
 
             Console.WriteLine("*--*--*--*--*--*");
             Console.ReadKey();
