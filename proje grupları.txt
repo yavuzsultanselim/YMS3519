@@ -1,0 +1,28 @@
+
+//Code Chalange
+
+1. Grup
+	--Ayşegül
+	--Sevcan
+	--Ayşe
+
+Proje:	Motorsiklet tamir sevis yedek parça ürün stok
+2. Grup
+	--Ergün
+	--Ahmet
+	--Utku
+Proje: Okul Yönetim sistemi
+
+3. Grup
+	--Emre
+	--Yavuz Selim
+Proje: 
+
+4. Grup
+	--Mustafa
+	--Mesra
+	--Elif
+	--Şeyma
+
+Proje: Kalıp takip sistemi.
+------------------------------------------------------------------
