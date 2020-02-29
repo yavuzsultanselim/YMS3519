@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tablolama İşlemleri</title>
+</head>
+<body>
+    <p>
+        Sayfa üzerinde bir takım verileri tablo formatında göstermek için size sunulan element "table". "tr" ve "td" en çok kullanılan child elementlerdir. 
+        Bazı Özellikleri; (th table head olarak tablo başlığını temsil eder)
+        <ul>
+            <li>Width=> tablonun genişliğini verir</li>
+            <li>Border=> tablonun iç ve dış çerçeveleri için bir boyut verir.</li>
+            <li>Cellspacing=> hüclerin birbirine olan uzaklıklarını verir.</li>
+            <li>Cellpadding=> hücre içerisinde değerlerin dış çerçeveye olan uzaklıklarını verir..</li>
+            <li>Colspan=> hücrelerin merge (birleştirilmesi) sağlayan özelliktir.</li>
+            <li>RowSpan=> satırları merge edilmesini sağlar</li>
+        </ul>
+    </p>
+    <hr />
+    <table border="1" width="100%" cellspacing="5" cellpadding="5">
+        <tr>
+            <th>
+                Adı
+            </th>
+            <th>
+                Soyadı
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center><strong>Bu tablo içerisinde sınıf mevcudu yeralmaktadır.</strong></center>
+            </td>
+        </tr>
+        <tr>
+            <td>Ayşegül</td>
+            <td>Ülker</td>
+        </tr>
+        <tr>
+            <td>Ergün</td>
+            <td>Yılmaz</td>
+        </tr>
+    </table>
+</body>
+</html>
