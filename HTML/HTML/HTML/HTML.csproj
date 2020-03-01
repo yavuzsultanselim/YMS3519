@@ -71,6 +71,8 @@
     <Content Include="2_FotografveLinkIslemleri.html" />
     <Content Include="3_LsitelemeIslemleri.html" />
     <Content Include="4_TablolamaIslemleri.html" />
+    <Content Include="5_DivKavramı.html" />
+    <Content Include="images\demo.gif" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
