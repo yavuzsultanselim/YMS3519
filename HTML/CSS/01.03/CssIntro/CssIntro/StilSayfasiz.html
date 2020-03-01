@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--Internal Css-->
+    <style>
+        body {
+            background-color: #2e2e2e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            /*background-image:url(/Images/wallhaven-2e5lxy.jpg);*/
+        }
+
+        p {
+            color: #c16d2f;
+        }
+
+        #main-container {
+            /*background-color:cornflowerblue;*/
+            width: 1080px;
+            height: 100px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #header {
+            width: 1080px;
+            height: 120px;
+            background-color: crimson;
+            border-radius: 10px 10px 0 0;
+        }
+
+        #content {
+            width: 550px;
+            height: 630px;
+            background-color: darkseagreen;
+            float: left;
+        }
+
+        .menu {
+            width: 265px;
+            height: 630px;
+            background-color: darkslateblue;
+            float: left;
+        }
+
+        #footer {
+            width: 1080px;
+            height: 120px;
+            background-color: crimson;
+            float: left;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Sayfa içerisinde 3 farklı css uygulanabilir
+        --Inline Css=> html tag'i içerisinde tanımlanan css
+        --Internal Css => bağlı bulunduğu sayfa içerisinde kullanılan Css
+        --External Css => farklı bir dosya olarak oluşturulan css'i farklı html sayfalarında kullanılabilir.
+
+
+        Id=> idleriniz için bir stil tanımlaması yapmak istiyorsanız # seçicisini kullanmalısınız.
+
+        Class=> classlarınız için bir stil tanımlaması gerçekleştirmek istiyorsanız . (nokta) secisini kullanmalısınız.
+        -->
+
+    <p>Örnek metin</p>
+    <hr />
+    <div id="main-container">
+        <div id="header">
+            <h1>Header</h1>
+        </div>
+        <div class="menu">
+            <p>Left Menu</p>
+        </div>
+        <div id="content">
+            <p>Content</p>
+        </div>
+        <div class="menu">
+            <p>Right Menu</p>
+        </div>
+        <div id="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>
