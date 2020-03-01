@@ -1,0 +1,29 @@
+﻿p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:18px;
+    font-weight:900;
+}
+.box{
+    width:100px;
+    height:100px;
+    background-color:crimson;
+    border-radius:5px;
+    float:left;
+    margin-left:5px;
+}
+.box p{
+    color:white;
+    text-align:center;
+    /*line-height:5px;*/
+    margin-top:25px;
+}
+.box:hover{
+    width:120px;
+    height:120px;
+    background-color:cadetblue;
+}
+p:hover{
+    color:aquamarine;
+    font-size:32px;
+}
+
