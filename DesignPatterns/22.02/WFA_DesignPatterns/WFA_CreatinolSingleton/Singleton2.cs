@@ -10,7 +10,7 @@ namespace WFA_CreatinolSingleton
     {
          private Singleton2() { }
 
-        private static Singleton2 _db;
+        private static Singleton2 _db;12
 
         public static Singleton2 Instance
         {
@@ -20,7 +20,7 @@ namespace WFA_CreatinolSingleton
                 {
                     _db = new Singleton2();
                 }
-                return _db;
+                return _db; 
             }
         }
 
