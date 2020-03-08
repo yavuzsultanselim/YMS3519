@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript 2</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+        function Message() {
+            document.getElementById('demo').innerHTML = "Merhaba Javascript";
+        }
+
+        function GetMessage(mesaj) {
+            document.getElementById('demo').innerHTML = mesaj;
+        }
+
+        function GetTextBox() {
+            var gelenDeger = document.getElementById('txtDeger').value;
+            document.getElementById('demo').innerHTML = gelenDeger;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" class="form-control" id="txtDeger" />
+            <figure>
+                <pre>
+<span id="demo">
+
+</span>
+</pre>
+            </figure>
+            <button class="btn btn-default" onclick="Message()">Tıkla!</button>
+            <button class="btn btn-primary" onclick="GetMessage('Bu değer kullanıcı tarafından girildi.')">Mesaj Ver</button>
+            <button class="btn btn-warning" onclick="GetTextBox()">TextBox'ın Değerini Al</button>
+        </div>
+    </div>
+</body>
+</html>

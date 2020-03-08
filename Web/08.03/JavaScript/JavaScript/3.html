@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+            //dışarıdan alınan 2 adet sayının toplam sonucunu alert ekranında gösterin.
+        function Calculate(s1,s2) {
+            var toplam = s1 + s2;
+            alert(toplam);
+        }
+
+        function Hesapla() {
+             var sayi1= document.getElementById('sayi1').value;
+            var sayi2 = document.getElementById('sayi2').value;
+
+            var s1 = parseInt(sayi1);
+            var s2 = parseInt(sayi2);
+
+            var toplam = s1 + s2;
+
+            document.getElementById('demo').innerHTML = toplam;
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="form-control" id="sayi1" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="sayi2" />
+                </div>
+                <button class="btn btn-primary" onclick="Hesapla()">Toplam Göster</button>
+            </div>
+            <figure>
+                <pre>
+<span id="demo"></span>
+                </pre>
+            </figure>
+            <button class="btn btn-default" onclick="Calculate(10,5)">Topla</button>
+        </div>
+    </div>
+</body>
+</html>
