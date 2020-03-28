@@ -1,0 +1,80 @@
+﻿
+.radius {
+    border-radius: 10px;
+}
+
+#mavi {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    float: left;
+    margin-right: 10px;
+}
+
+#pembe {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    float: left;
+    margin-right: 10px;
+}
+
+    #pembe p {
+        line-height: 120px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+#mor {
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+    float: left;
+    margin-right: 10px;
+}
+
+#turuncu {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    float: left;
+    margin-right: 10px;
+}
+
+    #turuncu p {
+        line-height: 120px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+#turkuaz {
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    float: left;
+    margin-right: 10px;
+}
+
+    #turkuaz p {
+        line-height: 120px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+.beyazYazi {
+    line-height: 120px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.farkliFont {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
