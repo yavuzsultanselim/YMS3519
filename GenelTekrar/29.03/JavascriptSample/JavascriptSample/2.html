@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript 1</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+        function Tikla() {
+            document.getElementById('demo').innerHTML = "Javascript Dersleri";
+        }
+        //dışarıdan alınan parametreyi span içerisinde gösterin.
+        function MesajVer(deger) {
+            document.getElementById('demo').innerHTML = deger;
+            //javascript ile değişkenler var ifadesi ile tanımlanır.
+            var sart = true;
+            var sayi = 5;
+            var ad = 'fatih';
+        }
+
+        function AdGoster() {
+            var ad = document.getElementById('ad').value;
+            document.getElementById('demo').innerHTML = ad;
+        }
+
+        function AdSoyadGoster() {
+            var ad = document.getElementById('ad').value;
+            var soyad = document.getElementById('soyad').value;
+
+            var adSoyad = ad + " " + soyad;
+            document.getElementById('demo').innerHTML = adSoyad;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <p>
+                    Javascript tarafında bir hata almanız durumunda browser üzerinde sağ tıklayarak incele seçenceğini kullandıktan sonra karşınıza gelen ekrandan "Console" sekmesine geçin. alınan hatanın sebebini Console sekmesinde görebilirsiniz. Ancak Break point olmadığı için işlemleri adım adım kontrol edebilmek için kendiniz alert ekranları oluşturabilirsiniz.
+
+                    not: javascript içerisinde string değerler için isterseniz tek tırmak isterseniz çift tırnak kullanabilirsiniz.
+                </p>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Ad:</label>
+                    <input type="text" class="form-control" id="ad" />
+                </div>
+                <div class="form-group">
+                    <label>Soyad:</label>
+                    <input type="text" class="form-control" id="soyad" />
+                </div>
+            </div>
+            <figure>
+                <pre>
+                <span id="demo">
+                    
+                    </span>
+
+                </pre>
+            </figure>
+            <button class="btn btn-default" onclick="Tikla()">Tıkla!</button>
+            <button class="btn btn-primary" onclick="MesajVer('Merhaba Javascript')">Tıkla!</button>
+            <button class="btn btn-success" onclick="AdGoster()">Ad Göster</button>
+            <button class="btn btn-warning" onclick="AdSoyadGoster()">Ad Soyad Göster</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+        //window.onload=> sayfa hazır olduğu tetiklenecek olan fonksiyonları barındırır.
+        window.onload = function () {
+
+           var result= this.document.getElementById('result');
+            var sehirler = ["İstanbul", "İzmir", "Ankara"];
+
+            //Length
+            document.getElementById('btn1').onclick = function () {
+                result.innerHTML = sehirler.length;
+            }
+
+            //Includes
+            this.document.getElementById('btn2').onclick = function () {
+                if (sehirler.includes('İstanbul')) {
+                    result.innerHTML = "İstanbul dizi içerisinde mevcut";
+                } else {
+                    result.innerHTML = "İstanbul dizi içerisinde mevcut değil";
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="btn-group">
+                <button class="btn btn-default" id="btn1">Length</button>
+                <button class="btn btn-default" id="btn2">Includes</button>
+            </div>
+            <figure>
+                <pre id="result">
+
+</pre>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>

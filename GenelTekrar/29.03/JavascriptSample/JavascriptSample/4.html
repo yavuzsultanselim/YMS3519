@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+         function Gonder() {
+            var ad = document.getElementById('ad').value;
+            var soyad = document.getElementById('soyad').value;
+            var email = document.getElementById('email').value;
+             var telefon = document.getElementById('telefon').value;
+
+             var sifre = document.getElementById('sifre');
+             if (sifre.value.length < 4) {
+                 var hata = '<div  class="alert alert-danger"><span>Şifre Çok Kısa</span> </div>';
+                 document.getElementById('alert').innerHTML = hata;
+             } else {
+                 var success = '<div  class="alert alert-success"><span>Şifre Doğru tanımlandı</span> </div>';
+                 document.getElementById('alert').innerHTML = success
+             }
+
+            document.getElementById('demo').innerHTML = ad + ' ' + soyad + ' ' + email + ' ' + telefon;
+        }
+    </script>
+</head>
+<body>
+    <div>
+ 
+    </div>
+    <div class="container">
+        <div class="row">
+           <div id="alert">
+
+           </div>
+            <figure>
+                <pre>
+<span id="demo">
+
+</span>
+</pre>
+            </figure>
+            <div class="col-md-6">
+                <label>Ad: </label>
+                <input type="text" class="form-control" id="ad" />
+            </div>
+            <div class="col-md-6">
+                <label>Soyad: </label>
+                <input type="text" class="form-control" id="soyad" />
+            </div>
+            <div class="col-md-6">
+                <label>Email: </label>
+                <input type="text" class="form-control" id="email" />
+            </div>
+            <div class="col-md-6">
+                <label>Telefon No: </label>
+                <input type="number" class="form-control" id="telefon" />
+            </div>
+            <div class="col-md-6">
+                <label>Şifre: </label>
+                <input type="text" class="form-control" id="sifre" />
+            </div>
+            <div class="col-md-6">
+                <label>Şifre (Tekrar): </label>
+                <input type="text" class="form-control" id="sifreTekrar" />
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-primary" onclick="Gonder()">Gönder</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
