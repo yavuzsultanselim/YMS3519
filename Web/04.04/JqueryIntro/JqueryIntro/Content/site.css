@@ -1,0 +1,10 @@
+﻿.metin{
+    width:150px;
+    height:150px;
+    float:left;
+    margin-right:10px;
+    text-align:center;
+    line-height:150px;
+    font-weight:bold;
+    box-shadow:7px 7px 5px 0px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sample Javascript Page</title>
+    <script>
+        function DegeriYakala() {
+            var deger = document.getElementById('txtDeger').value;
+            var lbl = document.getElementById('lblDeger')
+            lbl.innerHTML = deger;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtDeger" />
+
+    <button onclick="DegeriYakala()">Tamam</button>
+    <label id="lblDeger"></label>
+</body>
+</html>
