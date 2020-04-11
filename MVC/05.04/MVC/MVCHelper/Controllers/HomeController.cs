@@ -4,14 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVCLayout.Controllers
+namespace MVCHelper.Controllers
 {
     public class HomeController : Controller
     {
-       public ViewResult Index()
+        // GET: Home
+        public ViewResult Index()
         {
             return View();
         }
-      
+
+
     }
 }

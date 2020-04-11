@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--Html.Action metodu partial view'i Html olarak çözümler.-->
+<!--Kullanım olarak; Tanımlanan PartialView'ın controller içerisinde Action'ı olmak zorundadır (Action ypaılar beraberinde View dönen yapılar) -->
+<h2>Action Index</h2>
+
+
+<!--1. Kullanım:
+    Aynı Controller içerisindeki Action adını verirseniz o Action sayfa içerisinde konumlandırıalcaktır.-->
+@Html.Action("_PartialAction")
+<hr />
+<!--2. Kullanım:
+    2.1-Aynı Controller içerisindeki Action adını verirseniz o Action sayfa içerisinde konumlandırıalcaktır.
+    2.2- Action içerisinde parametre göndermek için tanımlanan alan.
+    -->
+@Html.Action("_PartialActionRouteValue", new { id = 1 })
