@@ -1,0 +1,9 @@
+//Northwind veritabý içerisinde bulunan tablolarý dahil eden bir layout tasarlayýn.
+Employees
+Products
+Category
+Suppliers
+Customers
+
+yukarý tablolar ieçrisindeki veriler listelensin ayrýca bir buton tanýmlanarak veri veri giriþi saðlanabilsin.
+---------------------------------------------------
