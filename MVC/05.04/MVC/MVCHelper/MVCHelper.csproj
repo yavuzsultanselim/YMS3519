@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActionController.cs" />
     <Compile Include="Controllers\ActionLinkController.cs" />
+    <Compile Include="Controllers\BeginFormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\TextBoxController.cs" />
@@ -219,6 +220,9 @@
     <Content Include="Views\ActionLink\Index.cshtml" />
     <Content Include="Views\ActionLink\Test.cshtml" />
     <Content Include="Views\TextBox\Index.cshtml" />
+    <Content Include="Views\TextBox\TextBoxFor.cshtml" />
+    <Content Include="Views\BeginForm\Index.cshtml" />
+    <Content Include="Views\BeginForm\PersonDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

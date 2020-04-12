@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<!--Html.BeginForm() <form></form> etiketinin karşılığını verir.-->
+<!--Kullanımı-->
+@using (Html.BeginForm())
+{
+    @*<input type="text" name="Name" />
+        <input type="text" name="SurName" />
+        <input type="number" name="id" />*@
+    @Html.TextBox("Name")
+    @Html.TextBox("SurName")
+    @Html.TextBox("Id")
+    <input type="submit" value="PostBack" />
+}

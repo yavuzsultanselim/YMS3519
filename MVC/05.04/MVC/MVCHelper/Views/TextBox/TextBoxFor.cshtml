@@ -1,0 +1,12 @@
+﻿@model MVCHelper.Models.Person
+@{
+    ViewBag.Title = "TextBoxFor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TextBoxFor</h2>
+
+@Html.TextBoxFor(x=>x.Name,new { @class="form-control"})
+
+<br />
+@Html.TextBoxFor(x => x.Surname, new { @class="form-control"})

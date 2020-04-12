@@ -1,4 +1,4 @@
-﻿
+﻿@model MVCHelper.Models.Person
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,9 +6,11 @@
 
 <h2>Index</h2>
 
-@*<input type="text" name="txtAd" id="txtAd"  />*@
+<input type="text" name="txtAd" id="txtAd"  />
 @Html.TextBox("txtAd")
 <br />
 @Html.TextBox("txtSoyad","Fatih",new { @class="form-control"})
+<br />
+@Html.TextBox("person",Model.Name,new { @class="form-control",placeholder="lütfen isim giriniz" })
 
 
