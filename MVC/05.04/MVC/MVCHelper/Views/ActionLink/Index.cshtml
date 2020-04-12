@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ActionLink/Index</h2>
+
+<!--Html.ActionLink() => <a href="/Home/Index">Anasayfa</a> etiketinin karşılığıdır. -->
+@*<a href="/Home/Index">Anasayfa</a>*@
+
+<!--1. Kullanım:
+        1. Kullanıcının göreceği text kısmı için sizden string olarak değer ister.
+        2. Link'e tıklandığı anda hangi Action'a gidecek, string olarak Action adı ister.
+    -->
+@Html.ActionLink("ActionLink Test", "Test")
+<hr />
+<!--3. Kullanım:
+        1. Kullanıcının göreceği text kısmı için sizden string olarak değer ister.
+        2. Link'e tıklandığı anda hangi Action'a gidecek, string olarak Action adı ister.
+        3. Bağlı bulunan Action'nın hangi controller içerisinde olduğu yazılır.'
+    -->
+@Html.ActionLink("Anasayfa", "Index", "Home")
+<hr />
+<!--3. Kullanım:
+        1. Kullanıcının göreceği text kısmı için sizden string olarak değer ister.
+        2. Link'e tıklandığı anda hangi Action'a gidecek, string olarak Action adı ister.
+        3. Bağlı bulunan Action'nın hangi controller içerisinde olduğu yazılır.'
+        4.Url üzerinden parametre olarak id gönderilmek istenirse "new{id=3}" eğer id parametresi göndeilmeyecekse "null" olarak işaretlenmelidir.
+        5. Html attribute değerlerini belirleyebilmeniz için geçerli olan alan
+    -->
+@Html.ActionLink("Ürünler", "Index", "Product", null, new { @class = "btn btn-primary" })
+<hr />
+@Html.ActionLink("Ürün Detay", "Detail", "Product", new { id = 3 }, new { @class = "btn btn-primary" })
