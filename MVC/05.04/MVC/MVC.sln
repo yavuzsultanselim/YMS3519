@@ -27,6 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDataTransfer", "MVCDataT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ödvler", "Ödvler", "{44DE5610-9C39-4273-A937-53DBB8BB9B55}"
 	ProjectSection(SolutionItems) = preProject
+		18.04 = 18.04
 		Ödev1.txt = Ödev1.txt
 	EndProjectSection
 EndProject
