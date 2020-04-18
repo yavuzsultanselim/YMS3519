@@ -150,6 +150,7 @@
     <Content Include="Views\Shipper\Index.cshtml" />
     <Content Include="Views\Shipper\Create.cshtml" />
     <Content Include="Views\Shipper\Update.cshtml" />
+    <Content Include="Views\Shipper\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

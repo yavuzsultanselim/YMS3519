@@ -50,6 +50,20 @@ namespace MVCCRUD.Controllers
             return RedirectToAction("Index");
         }
         //Silme
+        public ActionResult Delete(int id)
+        {
+            Shipper shipper = db.Shippers.Find(id);
+            return View(shipper);
+        }
+        [HttpPost]
+        public ActionResult Delete(Shipper model)
+        {
+           Shipper deleted= db.Shippers.Find(model.ShipperID);
+            db.Shippers.Remove(deleted);
+            db.SaveChanges();
+            TempData["success"] = "Nakliyeci silindi";
+            return RedirectToAction("Index");
+        }
 
     }
 }

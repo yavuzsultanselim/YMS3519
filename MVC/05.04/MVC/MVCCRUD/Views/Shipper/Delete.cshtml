@@ -1,0 +1,17 @@
+﻿@model Shipper
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.CompanyName</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x=>x.ShipperID)
+    <div class="alert alert-danger">
+        <span>Silmek istediğinize emin misiniz</span>
+    </div>
+   <button class="btn btn-danger">Evet</button>
+   @Html.ActionLink("İptal", "Index", "Shipper", null, new { @class="btn"})
+}
+
