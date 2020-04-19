@@ -1,0 +1,33 @@
+﻿@model MVC_Filter.Models.ViewModel.AppUserVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        @if (TempData["error"] != null)
+        {
+            <div class="alert alert-danger">
+                <span>@TempData["error"]</span>
+            </div>
+        }
+        <div class="row" style="margin-top:20px;">
+            @using (Html.BeginForm())
+            {
+                <div class="col-lg-10">
+                    <label>Kullanıcı Adı</label>
+                    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "kullanıcı adı" })
+                    @Html.ValidationMessageFor(x=>x.UserName,null,new { @class="text text-danger"})
+                </div>
+                <div class="col-lg-10">
+                    <label>Şifre</label>
+                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "şifre", type = "password" })
+                    @Html.ValidationMessageFor(x => x.Password,null,new { @class="text text-danger"})
+                </div>
+                <div class="col-lg-10">
+                    <input type="submit" value="Giriş Yap" class="btn btn-primary" />
+                </div>
+            }
+        </div>
+    </div>
+
