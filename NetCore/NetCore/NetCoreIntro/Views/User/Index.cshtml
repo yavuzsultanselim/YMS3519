@@ -1,0 +1,25 @@
+﻿@model List<NetCoreIntro.Models.Users>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Kullanıcı adı</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+               <td>@k.UserName</td>
+                <td>@k.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

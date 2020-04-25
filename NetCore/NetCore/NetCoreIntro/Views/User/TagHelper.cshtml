@@ -1,0 +1,23 @@
+﻿@model Users
+@{
+    ViewData["Title"] = "TagHelper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>TagHelper</h1>
+
+<form asp-action="TagHelper" asp-controller="User">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="text" class="form-control" />
+    </div>
+    <button type="submit">Kullanıcı Oluştur</button>
+</form>
