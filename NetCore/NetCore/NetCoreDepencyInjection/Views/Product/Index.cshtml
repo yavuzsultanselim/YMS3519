@@ -1,0 +1,13 @@
+﻿@model List<NetCoreDepencyInjection.Models.Entity.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul>
+    @foreach (var p in Model)
+    {
+        <li>@p.ProductName</li>
+    }
+</ul>
+
