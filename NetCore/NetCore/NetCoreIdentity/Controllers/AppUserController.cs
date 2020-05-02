@@ -44,7 +44,10 @@ namespace NetCoreIdentity.Controllers
                 }
                 else
                 {
-                    //hata durum mesajı yazılacak.
+                    foreach (var item in result.Errors.ToList())
+                    {
+                        ModelState.AddModelError(item.Code, item.Description);
+                    }
                 }
                 return View();
             }

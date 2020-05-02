@@ -37,6 +37,24 @@ namespace NetCoreIdentity
             services.AddDbContext<AppDbContext>(options=>options.UseSqlServer("server=.;database=NetCoreIdentityDB;uid=sa;pwd=123"));
 
             services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
+            //cookie oluþturma
+            services.ConfigureApplicationCookie(x =>
+            {
+                x.LoginPath = new PathString("/Account/Login");
+
+                x.Cookie = new CookieBuilder
+                {
+                    Name = "LoginCookie",
+                    HttpOnly=true,
+                    Expiration = null
+                };
+                x.SlidingExpiration = true;
+                x.ExpireTimeSpan = TimeSpan.FromMinutes(1);
+            });
+            services.Configure<PasswordHasherOptions>(options =>
+    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV2
+);
         }
 
        
@@ -51,6 +69,7 @@ namespace NetCoreIdentity
 
             app.UseStaticFiles();
             //app.UseMvcWithDefaultRoute();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -58,6 +77,7 @@ namespace NetCoreIdentity
                     template: "{controller=Home}/{action=Index}/{id?}"
                     );
             });
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
