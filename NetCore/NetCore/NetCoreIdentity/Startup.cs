@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCoreIdentity.Models.Context;
+using NetCoreIdentity.Models.Entity;
 
 namespace NetCoreIdentity
 {
@@ -33,6 +35,8 @@ namespace NetCoreIdentity
         {
             services.AddMvc(options=>options.EnableEndpointRouting=false);
             services.AddDbContext<AppDbContext>(options=>options.UseSqlServer("server=.;database=NetCoreIdentityDB;uid=sa;pwd=123"));
+
+            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
         }
 
        
