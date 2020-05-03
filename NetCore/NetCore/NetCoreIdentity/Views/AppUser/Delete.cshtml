@@ -1,0 +1,24 @@
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <h2>@Model.UserName</h2>
+        </div>
+        <form asp-action="Delete" asp-controller="AppUser" method="post">
+            <div class="card-body">
+
+
+                <span>Kullanıcıyı silmek istiyor musunuz?</span>
+
+            </div>
+            <button type="submit" class="btn btn-danger">Evet</button>
+        </form>
+    </div>
+</div>
+
+

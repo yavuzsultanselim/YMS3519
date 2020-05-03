@@ -36,7 +36,7 @@ namespace NetCoreIdentity
             services.AddMvc(options=>options.EnableEndpointRouting=false);
             services.AddDbContext<AppDbContext>(options=>options.UseSqlServer("server=.;database=NetCoreIdentityDB;uid=sa;pwd=123"));
 
-            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddIdentity<AppUser, AppUserRole>().AddEntityFrameworkStores<AppDbContext>();
 
             //cookie oluþturma
             services.ConfigureApplicationCookie(x =>

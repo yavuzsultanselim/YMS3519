@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NetCoreIdentity.Models.Context
 {
-    public class AppDbContext:IdentityDbContext<AppUser>
+    public class AppDbContext:IdentityDbContext<AppUser,AppUserRole,string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NetCoreIdentity.Models.Context;
 using NetCoreIdentity.Models.Entity;
 using NetCoreIdentity.Models.ViewModels;
 
@@ -12,14 +13,16 @@ namespace NetCoreIdentity.Controllers
     public class AppUserController : Controller
     {
         private readonly UserManager<AppUser> userManager;
+        private readonly AppDbContext context;
 
-        public AppUserController(UserManager<AppUser> userManager)
+        public AppUserController(UserManager<AppUser> userManager, AppDbContext context)
         {
             this.userManager = userManager;
+            this.context = context;
         }
         public IActionResult Index()
         {
-            return View();
+            return View(userManager.Users);
         }
 
         public IActionResult Register()
@@ -37,7 +40,7 @@ namespace NetCoreIdentity.Controllers
                     Email = appUserRegisterVM.Email,
 
                 };
-              var result= await userManager.CreateAsync(user,appUserRegisterVM.Password);
+                var result = await userManager.CreateAsync(user, appUserRegisterVM.Password);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index");
@@ -56,6 +59,39 @@ namespace NetCoreIdentity.Controllers
                 return View();
             }
 
+        }
+
+        public async Task<IActionResult> Details(string id)
+        {
+            var detail = await userManager.FindByIdAsync(id);
+            if (detail != null)
+            {
+                return View(detail);
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+            var deletedUser = await userManager.FindByIdAsync(id);
+            if (deletedUser != null)
+            {
+                return View(deletedUser);
+            }
+            return View();
+        }
+
+        //Todo: Hata veriyor. Araştırlacak.
+        [HttpPost]
+        public async Task<IActionResult> Delete(AppUser user)
+        {
+
+            var result = await userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }

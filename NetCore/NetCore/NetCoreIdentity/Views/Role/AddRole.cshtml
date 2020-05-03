@@ -1,0 +1,20 @@
+﻿@model AppUserRole
+@{
+    ViewData["Title"] = "AddRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <form asp-action="AddRole" asp-controller="Role" method="post">
+        <div class="form-group">
+            <label>Rol Adı</label>
+            <input asp-for="Name" class="form-control" placeholder="rol adı" />
+        </div>
+        <div class="form-group">
+            <label>Açıklama</label>
+            <input asp-for="Description" class="form-control" placeholder="Açıklama" />
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+</div>
+

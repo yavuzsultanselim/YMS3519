@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NetCoreIdentity.Controllers
 {
+    //Buradaki bütün Controllerları rolü admin olanlar görüntülüyebilir.
     [Authorize]
     public class AdminController : Controller
     {
