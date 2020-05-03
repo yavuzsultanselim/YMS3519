@@ -13,12 +13,12 @@ namespace NetCoreIdentity.Controllers
     public class AppUserController : Controller
     {
         private readonly UserManager<AppUser> userManager;
-        private readonly AppDbContext context;
+        private readonly RoleManager<AppUserRole> roleManager;
 
-        public AppUserController(UserManager<AppUser> userManager, AppDbContext context)
+        public AppUserController(UserManager<AppUser> userManager, RoleManager<AppUserRole> roleManager)
         {
             this.userManager = userManager;
-            this.context = context;
+            this.roleManager = roleManager;
         }
         public IActionResult Index()
         {
@@ -89,6 +89,17 @@ namespace NetCoreIdentity.Controllers
             var result = await userManager.DeleteAsync(user);
             if (result.Succeeded)
             {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> AssignAdminRole(string id)
+        {
+            AppUser user = await userManager.FindByIdAsync(id);
+            if (user != null)
+            {
+               await userManager.AddToRoleAsync(user, "Admin");
                 return RedirectToAction("Index");
             }
             return View();

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace NetCoreIdentity.Controllers
 {
     //Buradaki bütün Controllerları rolü admin olanlar görüntülüyebilir.
-    [Authorize]
+    [Authorize(Roles ="Admin",Policy =null)]
     public class AdminController : Controller
     {
         public IActionResult Index()

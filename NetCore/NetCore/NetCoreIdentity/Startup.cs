@@ -33,8 +33,8 @@ namespace NetCoreIdentity
              */
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(options=>options.EnableEndpointRouting=false);
-            services.AddDbContext<AppDbContext>(options=>options.UseSqlServer("server=.;database=NetCoreIdentityDB;uid=sa;pwd=123"));
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer("server=.;database=NetCoreIdentityDB;uid=sa;pwd=123"));
 
             services.AddIdentity<AppUser, AppUserRole>().AddEntityFrameworkStores<AppDbContext>();
 
@@ -46,7 +46,7 @@ namespace NetCoreIdentity
                 x.Cookie = new CookieBuilder
                 {
                     Name = "LoginCookie",
-                    HttpOnly=false,
+                    HttpOnly = false,
                     Expiration = null
                 };
                 x.SlidingExpiration = true;
@@ -54,7 +54,7 @@ namespace NetCoreIdentity
             });
         }
 
-       
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -70,11 +70,15 @@ namespace NetCoreIdentity
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+            name: "areas",
+            template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+          );
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}"
                     );
             });
-            
+
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapGet("/", async context =>

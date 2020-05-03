@@ -27,7 +27,7 @@
                             <td>
                                 <a asp-action="Details" asp-controller="AppUser" asp-route-id="@user.Id" class="btn btn-primary">Kullanıcı Detay</a><!--Butona tıklandığında ayrı bir sayfada kullanıcını detayları görüntülensin.-->
                                 <a asp-action="Delete" asp-controller="AppUser" asp-route-id="@user.Id" class="btn btn-danger">Kullanıcı Sil</a><!--Butona tıklandığında ayrı bir sayfada "xxx isimli kullanıcıyı silmek istiyor musun?" uyarısını versin. Ok butonuna tıklandığında kullanıcıyı silsin..-->
-                                <a  class="btn btn-success">Admin Yap</a><!--Butona tıklandığında o kullanıcının rolünü "Admin" olarak tanımlasın.-->
+                                <a asp-action="AssignAdminRole" asp-controller="AppUser" asp-route-id="@user.Id"  class="btn btn-success">Admin Yap</a><!--Butona tıklandığında o kullanıcının rolünü "Admin" olarak tanımlasın.-->
                             </td>
                         </tr>
                     }
