@@ -46,15 +46,12 @@ namespace NetCoreIdentity
                 x.Cookie = new CookieBuilder
                 {
                     Name = "LoginCookie",
-                    HttpOnly=true,
+                    HttpOnly=false,
                     Expiration = null
                 };
                 x.SlidingExpiration = true;
                 x.ExpireTimeSpan = TimeSpan.FromMinutes(1);
             });
-            services.Configure<PasswordHasherOptions>(options =>
-    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV2
-);
         }
 
        
@@ -73,18 +70,18 @@ namespace NetCoreIdentity
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "product",
+                    name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}"
                     );
             });
             
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
         }
     }
 }

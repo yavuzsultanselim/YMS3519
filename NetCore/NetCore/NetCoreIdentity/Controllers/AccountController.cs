@@ -28,7 +28,7 @@ namespace NetCoreIdentity.Controllers
         {
             if (ModelState.IsValid)
             {
-                AppUser user =await userManager.FindByNameAsync(appUserLoginVM.UserName);
+                AppUser user = await userManager.FindByNameAsync(appUserLoginVM.UserName);
                 if (user != null)
                 {
                     await signInManager.SignOutAsync();

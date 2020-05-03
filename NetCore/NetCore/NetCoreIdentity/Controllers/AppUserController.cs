@@ -37,7 +37,7 @@ namespace NetCoreIdentity.Controllers
                     Email = appUserRegisterVM.Email,
 
                 };
-              var result= await userManager.CreateAsync(user);
+              var result= await userManager.CreateAsync(user,appUserRegisterVM.Password);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index");
