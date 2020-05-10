@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Giriş Yap</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Kullanıcı Adı</label>
+                                    <input type="text" class="form-control" id="username" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Şifre</label>
+                                    <input type="password" class="form-control" id="password" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9" style="display:none" >
+                        <div class="card card col-lg-6 ">
+                            <div class="card-header text-center">
+                                <h2>Ürün Listesi</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="col">
+                                    <ul class="list-group" id="productlist">
+                                        <!--<li class="list-group-item">Kola</li>
+                        <li class="list-group-item">Kola</li>
+                        <li class="list-group-item">Kola</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <input type="button" value="Ürünleri Getir" class="btn btn-primary float-left" id="getproducts" />
+                                <input type="button" value="Temizle" class="btn btn float-right" id="clear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+          
+        </div>
+        
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var ul = $("#productlist");
+
+            $("#getproducts").click(function () {
+                var userName = $("#username").val();
+                var password = $("#password").val();
+                $.ajax({
+                    type: "Get",
+                    url: "https://localhost:44371/api/Product",
+                    headers: {
+                        "Authorization":"Basic "+btoa(userName+":"+password)
+                    },
+                    success: function (data) {
+                        //console.log(data);
+                        ul.empty();
+                        $.each(data, function (index, val) {
+                            var li = "<li class='list-group-item'>" + val.ProductName + "<button class='btn btn-danger float-right'>Sil</button></li>"
+                            ul.append(li);
+                        })
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                })
+            })
+            $("#clear").click(function () {
+                ul.empty();
+            })
+        })
+    </script>
+</body>
+</html>
