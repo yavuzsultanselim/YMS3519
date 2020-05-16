@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <h2>Çalışanlar</h2>
+                    <button class="btn btn-primary pull-right" id="getemployees">Çalışanları Getir</button>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ad</th>
+                                <th>Soyad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeTableBody">
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            if (sessionStorage.getItem("access_token") == null) {
+                window.location.href = "/Login.html";
+            }
+            $("#getemployees").click(function () {
+                $("#employeeTableBody").empty();
+              
+            })
+        })
+    </script>
+</body>
+</html>

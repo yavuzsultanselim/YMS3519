@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <h2>Giriş Yap</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="Email adresiniz" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Şifre</label>
+                            <input type="password" id="password" placeholder="Şifreniz" class="form-control" />
+                        </div>
+                        <button id="login" class="btn btn-primary">Giriş Yap</button>
+                        <div class="alert alert-danger collapse" role="alert" id="error">
+                            <span id="errorText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#login").click(function () {
+                $.ajax({
+                    method: "Post",
+                    url: "/token",
+                    contentType: "application/Json",
+                    data: {
+                        UserName: $("#email").val(),
+                        Password: $("#password").val(),
+                        grant_type:"password"
+                    },
+                    success: function (response) {
+                        console.log(response)
+                        sessionStorage.setItem("access_token", response.access_token);
+                        window.location.href="/Employee.html"
+                    },
+                    error: function (response) {
+                        console.log(response)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
