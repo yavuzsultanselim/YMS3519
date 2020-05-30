@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Category>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
@@ -18,12 +18,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Teknoloji</td>
-                <td>Teknoloji</td>
-                <td>
-                </td>
-            </tr>
+      @foreach (var category in Model)
+      {
+          <tr>
+              <td>@category.CategoryName</td>
+              <td>@category.Description</td>
+              <td>
+                  <a asp-action="Edit" asp-controller="Category" asp-route-id="@category.ID" class="btn btn-sm btn-warning">Düzenle</a>
+                  <a asp-action="Delete" asp-controller="Category" asp-route-id="@category.ID" class="btn btn-sm btn-danger">Sil</a>
+              </td>
+          </tr>
+      }
         </tbody>
     </table>
 </div>

@@ -37,6 +37,7 @@ namespace MVC
         {
             services.AddMvc(x=>x.EnableEndpointRouting=false);
             services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),b=>b.MigrationsAssembly("MVC")));
+            services.AddScoped<ICategoryService, CategoryRepository>();
             
            
         }
