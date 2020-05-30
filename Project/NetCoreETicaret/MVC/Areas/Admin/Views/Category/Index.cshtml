@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+            <a asp-action="Create" asp-controller="Category" class="btn btn-success float-right">Yeni Kategori</a>
+    </div>
+    <div class="card-body">
+    <table id="categorytable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Kategori Adı</th>
+                <th>Açıklama</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Teknoloji</td>
+                <td>Teknoloji</td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#categorytable').DataTable();
+        });
+    </script>
+
+
+ }
